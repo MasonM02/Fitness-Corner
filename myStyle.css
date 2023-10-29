@@ -1,0 +1,71 @@
+/* Reset some default styles for better consistency across browsers */
+body, h1, h2, h3, h4, p, ul, li {
+    margin: 0;   /* Add margin to above selectors */
+    padding: 0;   /* Add padding to above selectors */
+}
+
+/* Define colors for the color scheme */
+body {
+    background-color: #ffffff; /* Light gray background */
+    color: #333; /* Dark gray text color */
+    font-family: Arial, sans-serif; /* Default font family */
+    text-align: center;  /* sets the alignment of the text */
+}
+
+.myDiv {
+    border: 5px outset #030000; /* Light gray border for myDiv */
+    background-color: #f11109; /* Red background for myDiv */
+    text-align: center;  /* sets the alignment of the text */
+    padding: 20px;  /* sets padding around class */
+    margin: 10px 0;  /* sets margins around class */
+}
+
+header {
+    background-color: #ffffff; /* Red header background */
+    color: #000000; /* White text color */
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    color: #010101; /* Red heading color */
+}
+
+.container {
+    justify-content: space-around;  /* aligns container items when items do not use all space in container */
+    flex-wrap: nowrap; /* controls how containers sit on page */
+    margin: 0 auto;
+    display: flex; /* makes the containers flex around each other */
+}
+
+.box {
+    width: 250px; /* Set box width */
+    height: 500px ; /* Set box height */
+    background-color: #f10909; /* Red box background color */
+    color: #fff; /* White text color inside the box */
+    text-align: center; /* Center align text inside the box */
+    padding: 20px; /* Add padding inside the box */
+    margin: 0 auto; /* Add margin around the box */
+    border: 5px outset #000000; /* Light gray border for the box */
+    border-radius: 10px; /* Add border radius to create rounded corners */
+    display: inline-block;  /* makes the box text stay within the box parameters */
+}
+
+ul {
+    list-style: none; /* Remove default list styles */
+}
+
+nav ul {
+    margin-top: 20px; /* Add top margin to navigation menu */
+}
+
+nav ul li {
+    display: inline; /* Display menu items inline */
+    margin-right: 20px; /* Add right margin between menu items */
+}
+
+footer {
+    color: #000000; /* White text color inside the footer */
+    padding: 20px;
+    text-align: center;
+}
