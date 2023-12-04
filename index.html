@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    // Social Media Sharing Functions
+    function shareOnFacebook() {
+    const urlToShare = 'https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer';
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
+    window.open(facebookShareUrl, 'Share on Facebook', 'width=600,height=400');
+    }
+    function shareOnTwitter() {
+    const urlToShare = 'https://twitter.com/intent/tweet';
+    const textToShare = 'Twitter';
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(
+ textToShare)}`;
+    window.open(twitterShareUrl, 'Share on Twitter', 'width=600,height=400');
+    }
+    // Event listeners for social media sharing buttons
+    const shareFacebookButton = document.getElementById("share-facebook");
+    const shareTwitterButton = document.getElementById("share-twitter");
+    shareFacebookButton.addEventListener("click", shareOnFacebook);
+    shareTwitterButton.addEventListener("click", shareOnTwitter);
+    });
+        </script>
         <style>
-            .myDiv {
-  border: 5px outset rgb(248, 242, 242);
-  background-color: rgb(241, 9, 9);    
-  text-align: center;
-}
+            .logo {
+            text-align: center;
+            background-color: black;
+ }
         </style>
         <title>Fitness Corner - Home Page</title>
         <meta charset="UTF-8">
@@ -18,53 +39,65 @@
 
     </head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZPZRMC1XG"></script>
-<script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZPZRMC1XG"></script>
+ <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-KZPZRMC1XG');
-</script>
+ </script>
     <body>
         <header>
+            <div class="logo">
             <img src="Images/Logo.png" alt="Logo" width="200" height="200">
-            <div class="myDiv">
-                <h2>Fitness Fun Fact</h2>
             </div>
-            <h3 style="font-size:30px"> Simple Exercises for each Body Part!</h3>
-            <h4>Only 31% of people in 2020 met the guidelines for muscle training activity:</h4>
+            <div class="myDiv">
+                <h1>Fitness Fun Fact</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home Page</a> |</li>
+                        <li><a href="info.html">Intro to Weight Lifting</a> |</li>
+                        <li><a href="exercise.html">Basic Exercises</a> |</li>
+                    </ul>
+                </nav>
+            </div>
+            <h2 style="font-size:30px"> Simple Exercises for each Body Part!</h2>
                 <ul>
+                    <li>Only 31% of people in 2020 met the guidelines for muscle training activity:</li>
                     <li>The guidelines state that going to weight lift for 2 or more days a week would fulfill them.</li>
                     <li>That means a little under one third of Americans do not weight lift 2 or more days a week</li>
                     <li>That is a little over 100 million out of 327 million people! </li>
                 </ul>
         </header>
         <main>
-            <nav>
-                <img src="Images/Weightlift percent.gif" alt="Chart" width="400" height="200">
-                <ul>
-                    <li><a href="index.html">Home Page</a> |</li>
-                    <li><a href="info.html">Intro to Weight Lifting</a> |</li>
-                    <li><a href="exercise.html">Basic Exercises</a> |</li>
-                </ul>
-                <p>One of the most basic aspects of lifting is the terminology. 
-                    Most movements/things you do in the gym have a name to them. 
-                    For example, the hierarchy of lifting goes rep, set, exercises, workout. 
-                    Think of it like a Russian doll where each term is within the next and so on. 
-                    A workout has 4-8 exercises within it, and each exercise has 2-6 sets within it, and each set has 2-15 reps within it. 
-                    So it goes Workout->Exercise->Set->Rep!</p>
-                    <img src="Images/Exercises-sets-and-reps-736x569.jpg" alt="reps&sets" width="400" height="200">
-            </nav>
+            <img src="Images/Weightlift percent.gif" alt="Chart" width="400" height="200">
+            <img src="Images/Exercises-sets-and-reps-736x569.jpg" alt="reps&sets" width="400" height="200">
+            <p class="chart">One of the most basic aspects of lifting is the terminology.</p> 
+            <p class="chart">Most movements/things you do in the gym have a name to them.</p>
+            <p class="chart">For example, the hierarchy of lifting goes rep, set, exercises, workout.</p> 
+            <p class="chart">Think of it like a Russian doll where each term is within the next and so on.</p> 
+            <p class="chart">A workout has 4-8 exercises within it, and each exercise has 2-6 sets within it, and each set has 2-15 reps within it.</p> 
+            <p class="chart">So it goes Workout->Exercise->Set->Rep!</p>
         </main>
         <footer>
-            <h1>Form Section:</h1>
-            <p style="text-align:left">Name (Optional):</p>
-            <p style="text-align:right">Date:</p>
-
-            <p style="text-align:left">Did you learn anything new?</p>
-            <p style="text-align:right">Recommendations for content/features?</p>
-
+            <form>
+                <h3>Form</h3>
+                <label for="name">Name (Optional):</label><br>
+                <input type="text" id="name" name="name" value="Enter Name"><br>
+                <label for="date">Date:</label><br>
+                <input type="text" id="date" name="date" value="Enter Date"><br>
+                <label for="learn">Did you learn anything new?</label><br>
+                <input type="text" id="learn" name="learn" value="Enter Text"><br>
+                <label for="content">Recommendations for content/features?</label><br>
+                <input type="text" id="content" name="content" value="Enter Text">
+              </form>
+              <p style="text-align: center;background-color: gray;width: 300px;margin-left: 40%;padding: 5px;">&copy; Mason Malerba 2023</p>
+              <div class="social-sharing">
+                <button id="share-facebook" style="text-align: center;">Share on Facebook</button>
+                <button id="share-twitter" style="text-align: center;">Share on Twitter</button>
+                </div>
+              <script src="script.js"></script>
         </footer>
     </body>
 </html>

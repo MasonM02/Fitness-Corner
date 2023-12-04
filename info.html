@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    // Social Media Sharing Functions
+    function shareOnFacebook() {
+    const urlToShare = 'https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer';
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
+    window.open(facebookShareUrl, 'Share on Facebook', 'width=600,height=400');
+    }
+    function shareOnTwitter() {
+    const urlToShare = 'https://twitter.com/intent/tweet';
+    const textToShare = 'Twitter';
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(
+ textToShare)}`;
+    window.open(twitterShareUrl, 'Share on Twitter', 'width=600,height=400');
+    }
+    // Event listeners for social media sharing buttons
+    const shareFacebookButton = document.getElementById("share-facebook");
+    const shareTwitterButton = document.getElementById("share-twitter");
+    shareFacebookButton.addEventListener("click", shareOnFacebook);
+    shareTwitterButton.addEventListener("click", shareOnTwitter);
+    });
+        </script>
         <style>
-            .myDiv {
-  border: 5px outset rgb(248, 242, 242);
-  background-color: rgb(241, 9, 9);    
-  text-align: center;
-}
+            .logo {  
+            text-align: center;
+            background-color: black;
+ }
         </style>
         <title>Fitness Corner - Information Page</title>
         <meta charset="UTF-8">
@@ -18,61 +39,73 @@
 
     </head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZPZRMC1XG"></script>
-<script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZPZRMC1XG"></script>
+ <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-KZPZRMC1XG');
-</script>
+ </script>
     <body>
         <header>
-            <img src="Images/Logo.png" alt="Logo" width="200" height="200">
+            <div class="logo">
+                <img src="Images/Logo.png" alt="Logo" width="200" height="200">
+                </div>
             <div class="myDiv">
-                <h2>Fitness Fun Fact</h2>
+                <h1>Fitness Fun Fact</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home Page</a> |</li>
+                        <li><a href="info.html">Intro to Weight Lifting</a> |</li>
+                        <li><a href="exercise.html">Basic Exercises</a> |</li>
+                    </ul>
+                </nav>
             </div>
-            <h3 style="font-size:30px"> Simple Exercises for each Body Part!</h3>
-            <p>Before you start working out you have to decide what are your goals and are they long term or short term.
-                Many people will go to the gym and continue with it into their retirement years yet some will go to the gym 
-                for a short term goal like losing weight for a wedding or gaining muscle for a movie roll. 
-                These all determine how you will eat and train when you go to the gym.</p>
-            <img src="Images/Screenshot (78).png" alt="Table" width="400" height="200">          
+            <h1 style="font-size:30px"> General Weightlifting Information!</h1>
+            <p class="chart">Before you start working out you have to decide what are your goals and are they long term or short term.</p> 
+            <p class="chart">Many people will go to the gym and continue with it into their retirement years.</p> 
+            <p class="chart">Some will go to the gym for a short term goal like losing weight for a wedding or gaining muscle for a movie roll.</p> 
+            <p class="chart">These all determine how you will eat and train when you go to the gym.</p>        
         </header>
         <main>
-            <h1>This picture showcases the 4 different ways to train while weightlifting in the gym:</h1>
-            <div class="container">
-                <div id="endurance" class="box">
-                    <h2>Endurance</h2>
-                    <p>You would lift for endurance if you wanted to get your heartrate up and burn as much fat/calories as possible, this method is used mainly by circuit classes and HITT workouts.</p>
+            <h2>This picture showcases the 4 different ways to train while weightlifting in the gym:</h2>
+            <img src="Images/Screenshot (78).png" alt="Table" width="400" height="200"><br>
+            <div class="box-info">
+                <h3>Endurance</h3>
+                <p>You would lift for endurance if you wanted to get your heart rate up and burn as much fat/calories as possible, this method is used mainly by circuit classes and HITT workouts.</p>
             </div>
-            <div class="container">
-                <div id="power" class="box">
-                    <h2>Power</h2>
-                    <p>You would lift for power if you wanted explosive force and being able to put out your maximum strength in short quick bursts, which is mainly useful for sports like football and boxing.</p>
+            <div class="box-info">
+                <h3>Power</h3>
+                <p>You would lift for power if you wanted explosive force and being able to put out your maximum strength in short quick bursts, which is mainly useful for sports like football and boxing.</p>
             </div>
-            <div class="container">
-                <div id="strength" class="box">
-                    <h2>Strength</h2>
-                    <p>You would lift for strength if you just wanted to go for pure strength and maximum muscle mass growth, power lifters mainly use this method as their competitions are purely about lifting the most amount of weight you possibly can.</p> 
+            <div class="box-info">
+                <h3>Strength</h3>
+                <p>You would lift for strength if you just wanted to go for pure strength and maximum muscle mass growth, power lifters mainly use this method as their competitions are purely about lifting the most amount of weight you possibly can.</p> 
             </div>     
-            <div class="container">
-                <div id="hypertrophy" class="box">
-                    <h2>Hypertrophy</h2>   
-                    <p>You would lift for Hypertrophy if you wanted to increase the size of your muscles and make them look bigger, but without actually adding as much muscle mass as it looks. Hypertrophy could be compared to a balloon being blown up as in your muscles will increase in size and strength but mainly will benefit from just looking fuller than they are, this method is mainly used by bodybuilders and models.</p>
-            </div>
-        </div>
-            </div>
-        </div>
+            <div class="box-info">
+                <h3>Hypertrophy</h3>   
+                <p>You would lift for Hypertrophy if you wanted to increase the size of your muscles and make them look bigger, but without actually adding as much muscle mass as it looks. Hypertrophy could be compared to a balloon being blown up as in your muscles will increase in size and strength but mainly will benefit from just looking fuller than they are, this method is mainly used by bodybuilders and models.</p>
             </div>
         </main>
         <footer>
-            <h1>Form Section:</h1>
-            <p style="text-align:left">Name (Optional):</p>
-            <p style="text-align:right">Date:</p>
-
-            <p style="text-align:left">Did you learn anything new?</p>
-            <p style="text-align:right">In which way would you like to train?</p>
+            <form>
+                <h4>Form</h4>
+                <label for="name">Name (Optional):</label><br>
+                <input type="text" id="name" name="name" value="Enter Name"><br>
+                <label for="date">Date:</label><br>
+                <input type="text" id="date" name="date" value="Enter Date"><br>
+                <label for="learn">Did you learn anything new?</label><br>
+                <input type="text" id="learn" name="learn" value="Enter Text"><br>
+                <label for="content">Recommendations for content/features?</label><br>
+                <input type="text" id="content" name="content" value="Enter Text">
+              </form>
+              <p style="text-align: center;background-color: gray;width: 300px;margin-left: 40%;padding: 5px;">&copy; Mason Malerba 2023</p>
+              <div class="social-sharing">
+                <button id="share-facebook" style="text-align: center;">Share on Facebook</button>
+                <button id="share-twitter" style="text-align: center;">Share on Twitter</button>
+                </div>
+              <script src="script.js"></script>
         </footer>
     </body>
 </html>

@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    // Social Media Sharing Functions
+    function shareOnFacebook() {
+    const urlToShare = 'https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer';
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}`;
+    window.open(facebookShareUrl, 'Share on Facebook', 'width=600,height=400');
+    }
+    function shareOnTwitter() {
+    const urlToShare = 'https://twitter.com/intent/tweet';
+    const textToShare = 'Twitter';
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(urlToShare)}&text=${encodeURIComponent(
+ textToShare)}`;
+    window.open(twitterShareUrl, 'Share on Twitter', 'width=600,height=400');
+    }
+    // Event listeners for social media sharing buttons
+    const shareFacebookButton = document.getElementById("share-facebook");
+    const shareTwitterButton = document.getElementById("share-twitter");
+    shareFacebookButton.addEventListener("click", shareOnFacebook);
+    shareTwitterButton.addEventListener("click", shareOnTwitter);
+    });
+        </script>
         <style>
-            .myDiv {
-  border: 5px outset rgb(248, 242, 242);
-  background-color: rgb(241, 9, 9);    
-  text-align: center;
-}
+            .logo {  
+            text-align: center;
+            background-color: black;
+ }
         </style>
         <title>Fitness Corner - Exercise Page</title>
         <meta charset="UTF-8">
@@ -18,74 +39,82 @@
             
     </head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZPZRMC1XG"></script>
-<script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZPZRMC1XG"></script>
+ <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-KZPZRMC1XG');
-</script>
+ </script>
     <body>
         <header>
-            <img src="Images/Logo.png" alt="Logo" width="200" height="200">
+            <div class="logo">
+                <img src="Images/Logo.png" alt="Logo" width="200" height="200">
+                </div>
             <div class="myDiv">
-                <h2>Fitness Fun Fact</h2>
+                <h1>Fitness Fun Fact</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home Page</a> |</li>
+                        <li><a href="info.html">Intro to Weight Lifting</a> |</li>
+                        <li><a href="exercise.html">Basic Exercises</a> |</li>
+                    </ul>
+                </nav>
             </div>
-            <h3 style="font-size:30px"> Simple Exercises for each Body Part!</h3>
 
         </header>
         <main>
-            <div class="container">
-                <div id="Chest" class="box">
-                    <img src="Images/Chest Press.png" alt="benchPress" width="200" height="200">
-                    <h1>Barbell Bench Press</h1>
+            <h2 style="font-size:30px"> Simple Exercises for each Body Part!</h2>
+            <div class="box-exercise">
+                    <img src="Images/Chest Press.png" alt="benchPress" width="100" height="100">
+                    <h3>Barbell Bench Press</h3>
                     <p>Sit down on the bench, make sure pinkies are lined up with lines on bar, make sure feet do not slip when u push down on them, and then lifting the bar and bring it down to your chest, at the top of your pectoral muscle, then slowly push it back up to starting position and repeat.</p>
             </div>
-            <div class="container">
-                <div id="Tricep" class="box">
-                    <img src="Images/Tricep Extension.png" alt="tricepExtension" width="200" height="200">
-                    <h1>Cable Tricep Pushdown</h1>
+            <div class="box-exercise">
+                    <img src="Images/Tricep Extension.png" alt="tricepExtension" width="100" height="100">
+                    <h3>Cable Tricep Pushdown</h3>
                     <p>Sit down on the bench, make sure pinkies are lined up with lines on bar, make sure feet do not slip when u push down on them, and then lifting the bar and bring it down to your chest, at the top of your pectoral muscle, then slowly push it back up to starting position and repeat.</p>
             </div>
-            <div class="container">
-                <div id="Bicep" class="box">
-                    <img src="Images/Dumbbell Curls.jpg" alt="bicepCurl" width="200" height="200">
-                    <h1>Dumbbell Alternating Curls</h1>
+            <div class="box-exercise">
+                    <img src="Images/Dumbbell Curls.jpg" alt="bicepCurl" width="100" height="100">
+                    <h3>Dumbbell Alternating Curls</h3>
                     <p>Stand straight up with a dumbbell in each hand. Bring one dumbbell up, not moving your upper arm only your lower half of your arm, hold at the top for a second then release and bring the dumbbell down. After this is done repeat with the opposite arm. Completing one rep of each arm counts as one total rep with this exercise.</p>
             </div>
-            <div class="container">
-                <div id="Shoulder" class="box">
-                    <img src="Images/Lateral Raises.webp" alt="lateralRaise" width="200" height="200">
-                    <h1>Lateral Raises</h1>
+            <div class="box-exercise">
+                    <img src="Images/Lateral Raises.webp" alt="lateralRaise" width="100" height="100">
+                    <h3>Lateral Raises</h3>
                     <p>Stand up straight with a dumbbell in each arm at your side. Puff out your chest and bring up your arms parallel to your body with a slight bend in your elbow, bringing them up to about shoulder height or a little below. Then bring them down slowly and repeat.</p>
             </div>
-            <div class="container">
-                <div id="Back" class="box">
-                    <img src="Images/Barbell row.png" alt="barbellRow" width="200" height="200">
-                    <h1>Barbell Bent Over Row</h1>
+            <div class="box-exercise">
+                    <img src="Images/Barbell row.png" alt="barbellRow" width="100" height="100">
+                    <h3>Barbell Bent Over Row</h3>
                     <p>Bend slightly over with your back straightened. Now lift the barbell from your knees to your lower chest/abdomen in a backward pulling motion, letting your elbows be tucked into your back, then release and go back down and repeat. </p>
             </div>
-            <div class="container">
-                <div id="Leg" class="box">
-                    <img src="Images/Squat.webp" alt="squat" width="200" height="200">
-                    <h1>Squat(Barbell Squat)</h1>
+            <div class="box-exercise">
+                    <img src="Images/Squat.webp" alt="squat" width="100" height="100">
+                    <h3>Squat(Barbell Squat)</h3>
                     <p>This is a body weight exercise but can be enhanced by adding a barbell to it. Standing straight up, you bend your knees and stick your butt out. Knees at a 90 degree angle with your weight on your feet. Then rise back to full height and repeat. If you feel like body weight is not doing enough you can put a barbell on your back and do the same thing with the barbell attached.</p>
             </div>
-        </div>
-    </div>
-        </div>
-    </div>
-        </div>
-    </div>
         </main>
         <footer>
-            <h1>Form Section:</h1>
-            <p style="text-align:left">Name (Optional):</p>
-            <p style="text-align:right">Date:</p>
-
-            <p style="text-align:left">Did you learn anything new?</p>
-            <p style="text-align:right">Favorite exercise on this list?</p>
+            <form>
+                <h4>Form</h4>
+                <label for="name">Name (Optional):</label><br>
+                <input type="text" id="name" name="name" value="Enter Name"><br>
+                <label for="date">Date:</label><br>
+                <input type="text" id="date" name="date" value="Enter Date"><br>
+                <label for="learn">Did you learn anything new?</label><br>
+                <input type="text" id="learn" name="learn" value="Enter Text"><br>
+                <label for="content">Recommendations for content/features?</label><br>
+                <input type="text" id="content" name="content" value="Enter Text">
+              </form>
+              <p style="text-align: center;background-color: gray;width: 300px;margin-left: 40%;padding: 5px;">&copy; Mason Malerba 2023</p>
+              <div class="social-sharing">
+                <button id="share-facebook" style="text-align: center;">Share on Facebook</button>
+                <button id="share-twitter" style="text-align: center;">Share on Twitter</button>
+                </div>
+              <script src="script.js"></script>
         </footer>
     </body>
 </html>
