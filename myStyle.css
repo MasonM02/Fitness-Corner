@@ -35,7 +35,7 @@ h1, h2, h3, h4 {
 
 .box-exercise {
     width: 300px; /* Set box width */
-    height: 400px; /* Set box height */
+    height: fit-content; /* Set box height */
     background-color: #f10909; /* Red box background color */
     color: #fff; /* White text color inside the box */
     text-align: center; /* Center align text inside the box */
@@ -83,9 +83,15 @@ form {
     padding: 5px;
     margin-left: 40%;
     background-color: gray;
-    width: 300px;
+    width: 20%;
     height: auto;
 }
 .chart {
     margin-top: 20px;
+}
+#side-box {
+    background-color: black;
+    height: 100%;
+    width: 20%;
+    flex-direction: column-reverse;
 }

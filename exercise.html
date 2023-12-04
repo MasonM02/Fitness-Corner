@@ -28,6 +28,14 @@
             text-align: center;
             background-color: black;
  }
+            .hide {
+  display: none;
+ }
+    
+            .my-hover:hover + .hide {
+  display: block;
+  color: white;
+ }
         </style>
         <title>Fitness Corner - Exercise Page</title>
         <meta charset="UTF-8">
@@ -68,33 +76,33 @@
             <h2 style="font-size:30px"> Simple Exercises for each Body Part!</h2>
             <div class="box-exercise">
                     <img src="Images/Chest Press.png" alt="benchPress" width="100" height="100">
-                    <h3>Barbell Bench Press</h3>
-                    <p>Sit down on the bench, make sure pinkies are lined up with lines on bar, make sure feet do not slip when u push down on them, and then lifting the bar and bring it down to your chest, at the top of your pectoral muscle, then slowly push it back up to starting position and repeat.</p>
+                    <h3 class="my-hover">Barbell Bench Press</h3>
+                    <p class="hide">Sit down on the bench, make sure pinkies are lined up with lines on bar, make sure feet do not slip when u push down on them, and then lifting the bar and bring it down to your chest, at the top of your pectoral muscle, then slowly push it back up to starting position and repeat.</p>
             </div>
             <div class="box-exercise">
                     <img src="Images/Tricep Extension.png" alt="tricepExtension" width="100" height="100">
-                    <h3>Cable Tricep Pushdown</h3>
-                    <p>Sit down on the bench, make sure pinkies are lined up with lines on bar, make sure feet do not slip when u push down on them, and then lifting the bar and bring it down to your chest, at the top of your pectoral muscle, then slowly push it back up to starting position and repeat.</p>
+                    <h3 class="my-hover">Cable Tricep Pushdown</h3>
+                    <p class="hide">Sit down on the bench, make sure pinkies are lined up with lines on bar, make sure feet do not slip when u push down on them, and then lifting the bar and bring it down to your chest, at the top of your pectoral muscle, then slowly push it back up to starting position and repeat.</p>
             </div>
             <div class="box-exercise">
                     <img src="Images/Dumbbell Curls.jpg" alt="bicepCurl" width="100" height="100">
-                    <h3>Dumbbell Alternating Curls</h3>
-                    <p>Stand straight up with a dumbbell in each hand. Bring one dumbbell up, not moving your upper arm only your lower half of your arm, hold at the top for a second then release and bring the dumbbell down. After this is done repeat with the opposite arm. Completing one rep of each arm counts as one total rep with this exercise.</p>
+                    <h3 class="my-hover">Dumbbell Alternating Curls</h3>
+                    <p class="hide">Stand straight up with a dumbbell in each hand. Bring one dumbbell up, not moving your upper arm only your lower half of your arm, hold at the top for a second then release and bring the dumbbell down. After this is done repeat with the opposite arm. Completing one rep of each arm counts as one total rep with this exercise.</p>
             </div>
             <div class="box-exercise">
                     <img src="Images/Lateral Raises.webp" alt="lateralRaise" width="100" height="100">
-                    <h3>Lateral Raises</h3>
-                    <p>Stand up straight with a dumbbell in each arm at your side. Puff out your chest and bring up your arms parallel to your body with a slight bend in your elbow, bringing them up to about shoulder height or a little below. Then bring them down slowly and repeat.</p>
+                    <h3 class="my-hover">Lateral Raises</h3>
+                    <p class="hide">Stand up straight with a dumbbell in each arm at your side. Puff out your chest and bring up your arms parallel to your body with a slight bend in your elbow, bringing them up to about shoulder height or a little below. Then bring them down slowly and repeat.</p>
             </div>
             <div class="box-exercise">
                     <img src="Images/Barbell row.png" alt="barbellRow" width="100" height="100">
-                    <h3>Barbell Bent Over Row</h3>
-                    <p>Bend slightly over with your back straightened. Now lift the barbell from your knees to your lower chest/abdomen in a backward pulling motion, letting your elbows be tucked into your back, then release and go back down and repeat. </p>
+                    <h3 class="my-hover">Barbell Bent Over Row</h3>
+                    <p class="hide">Bend slightly over with your back straightened. Now lift the barbell from your knees to your lower chest/abdomen in a backward pulling motion, letting your elbows be tucked into your back, then release and go back down and repeat. </p>
             </div>
             <div class="box-exercise">
                     <img src="Images/Squat.webp" alt="squat" width="100" height="100">
-                    <h3>Squat(Barbell Squat)</h3>
-                    <p>This is a body weight exercise but can be enhanced by adding a barbell to it. Standing straight up, you bend your knees and stick your butt out. Knees at a 90 degree angle with your weight on your feet. Then rise back to full height and repeat. If you feel like body weight is not doing enough you can put a barbell on your back and do the same thing with the barbell attached.</p>
+                    <h3 class="my-hover">Squat(Barbell Squat)</h3>
+                    <p class="hide">This is a body weight exercise but can be enhanced by adding a barbell to it. Standing straight up, you bend your knees and stick your butt out. Knees at a 90 degree angle with your weight on your feet. Then rise back to full height and repeat. If you feel like body weight is not doing enough you can put a barbell on your back and do the same thing with the barbell attached.</p>
             </div>
         </main>
         <footer>
@@ -109,7 +117,7 @@
                 <label for="content">Recommendations for content/features?</label><br>
                 <input type="text" id="content" name="content" value="Enter Text">
               </form>
-              <p style="text-align: center;background-color: gray;width: 300px;margin-left: 40%;padding: 5px;">&copy; Mason Malerba 2023</p>
+              <p style="text-align: center;background-color: gray;width: 20%;margin-left: 40%;padding: 5px;">&copy; Mason Malerba 2023</p>
               <div class="social-sharing">
                 <button id="share-facebook" style="text-align: center;">Share on Facebook</button>
                 <button id="share-twitter" style="text-align: center;">Share on Twitter</button>
