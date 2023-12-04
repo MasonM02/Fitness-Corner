@@ -70,6 +70,7 @@ ul li{
 nav ul li {
     display: inline; /* Display menu items inline */
     margin-right: 20px; /* Add right margin between menu items */
+    color: black;
 }
 
 footer {
