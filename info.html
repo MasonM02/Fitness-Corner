@@ -28,6 +28,14 @@
             text-align: center;
             background-color: black;
  }
+            .hide {
+  display: none;
+ }
+    
+            .my-hover:hover + .hide {
+  display: block;
+  color: white;
+ }
         </style>
         <title>Fitness Corner - Information Page</title>
         <meta charset="UTF-8">
@@ -70,22 +78,22 @@
         </header>
         <main>
             <h2>This picture showcases the 4 different ways to train while weightlifting in the gym:</h2>
-            <img src="Images/Screenshot (78).png" alt="Table" width="400" height="200"><br>
+            <img src="Images/Information.png" alt="Table" width="400" height="200"><br>
             <div class="box-info">
-                <h3>Endurance</h3>
-                <p>You would lift for endurance if you wanted to get your heart rate up and burn as much fat/calories as possible, this method is used mainly by circuit classes and HITT workouts.</p>
+                <h3 class="my-hover">Endurance</h3>
+                <p class="hide">You would lift for endurance if you wanted to get your heart rate up and burn as much fat/calories as possible, this method is used mainly by circuit classes and HITT workouts.</p>
             </div>
             <div class="box-info">
-                <h3>Power</h3>
-                <p>You would lift for power if you wanted explosive force and being able to put out your maximum strength in short quick bursts, which is mainly useful for sports like football and boxing.</p>
+                <h3 class="my-hover">Power</h3>
+                <p class="hide">You would lift for power if you wanted explosive force and being able to put out your maximum strength in short quick bursts, which is mainly useful for sports like football and boxing.</p>
             </div>
             <div class="box-info">
-                <h3>Strength</h3>
-                <p>You would lift for strength if you just wanted to go for pure strength and maximum muscle mass growth, power lifters mainly use this method as their competitions are purely about lifting the most amount of weight you possibly can.</p> 
+                <h3 class="my-hover">Strength</h3>
+                <p class="hide">You would lift for strength if you just wanted to go for pure strength and maximum muscle mass growth, power lifters mainly use this method as their competitions are purely about lifting the most amount of weight you possibly can.</p> 
             </div>     
             <div class="box-info">
-                <h3>Hypertrophy</h3>   
-                <p>You would lift for Hypertrophy if you wanted to increase the size of your muscles and make them look bigger, but without actually adding as much muscle mass as it looks. Hypertrophy could be compared to a balloon being blown up as in your muscles will increase in size and strength but mainly will benefit from just looking fuller than they are, this method is mainly used by bodybuilders and models.</p>
+                <h3 class="my-hover">Hypertrophy</h3>   
+                <p class="hide">You would lift for Hypertrophy if you wanted to increase the size of your muscles and make them look bigger, but without actually adding as much muscle mass as it looks. Hypertrophy could be compared to a balloon being blown up as in your muscles will increase in size and strength but mainly will benefit from just looking fuller than they are, this method is mainly used by bodybuilders and models.</p>
             </div>
         </main>
         <footer>

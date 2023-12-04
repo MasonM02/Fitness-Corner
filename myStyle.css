@@ -48,7 +48,7 @@ h1, h2, h3, h4 {
 }
 .box-info {
     width: 250px; /* Set box width */
-    height: 300px; /* Set box height */
+    height: fit-content; /* Set box height */
     background-color: #f10909; /* Red box background color */
     color: #fff; /* White text color inside the box */
     text-align: center; /* Center align text inside the box */
